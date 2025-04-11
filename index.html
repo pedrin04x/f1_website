@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 World | Tudo sobre Fórmula 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/f1-logo.png" alt="Fórmula 1 Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <li><a href="classificacao.html">Classificação</a></li>
+                    <li><a href="pilotos.html">Pilotos</a></li>
+                    <li><a href="equipes.html">Equipes</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Temporada 2025 da Fórmula 1</h1>
+            <p>Acompanhe todas as emoções da maior categoria do automobilismo mundial</p>
+            <a href="#destaques" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="destaques" class="highlights">
+            <h2>Destaques</h2>
+            <div class="highlight-grid">
+                <article class="highlight-card">
+                    <img src="images/gp-destaque.jpg" alt="GP em destaque">
+                    <div class="card-content">
+                        <h3>Próximo Grande Prêmio: Holanda</h3>
+                        <p>27 de Agosto - Circuito de Zandvoort</p>
+                        <a href="#" class="btn-small">Detalhes</a>
+                    </div>
+                </article>
+                <article class="highlight-card">
+                    <img src="images/piloto-destaque.jpg" alt="Piloto em destaque">
+                    <div class="card-content">
+                        <h3>Piloto em Destaque: Max Verstappen</h3>
+                        <p>Líder do campeonato com 8 vitórias</p>
+                        <a href="#" class="btn-small">Perfil</a>
+                    </div>
+                </article>
+                <article class="highlight-card">
+                    <img src="images/equipe-destaque.jpg" alt="Equipe em destaque">
+                    <div class="card-content">
+                        <h3>Equipe em Destaque: Red Bull</h3>
+                        <p>Dominando a temporada 2023</p>
+                        <a href="#" class="btn-small">Detalhes</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="standings">
+            <h2>Classificação do Campeonato</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="pilotos">Pilotos</button>
+                <button class="tab-btn" data-tab="equipes">Equipes</button>
+            </div>
+            
+            <div id="pilotos" class="tab-content active">
+                <table class="standing-table" id="tabela-pilotos">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Piloto</th>
+                            <th>Nacionalidade</th>
+                            <th>Equipe</th>
+                            <th>Pontos</th>
+                            <th>Vitórias</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados serão preenchidos via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="equipes" class="tab-content">
+                <table class="standing-table">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Equipe</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="equipes-table">
+                        <!-- Dados serão preenchidos via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="news">
+            <h2>Últimas Notícias</h2>
+            <div class="news-grid">
+                <!-- Notícias serão carregadas via JavaScript -->
+            </div>
+            <a href="noticias.html" class="btn">Ver Todas as Notícias</a>
+        </section>
+
+        <section class="circuits">
+            <h2>Circuitos da Temporada</h2>
+            <div class="circuits-grid" id="circuits-container">
+            </div>
+        </section>
+
+        <section class="last-race">
+            <h2>Última Corrida</h2>
+            <div class="race-results" id="last-race-results">
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/f1-logo-white.png" alt="Fórmula 1 Logo">
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Campeonato</h4>
+                    <ul>
+                        <li><a href="#">Calendário</a></li>
+                        <li><a href="#">Classificação</a></li>
+                        <li><a href="#">Regulamento</a></li>
+                        <li><a href="#">História</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Equipes</h4>
+                    <ul>
+                        <li><a href="#">Red Bull</a></li>
+                        <li><a href="#">Ferrari</a></li>
+                        <li><a href="#">Mercedes</a></li>
+                        <li><a href="#">Ver todas</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 F1 World. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

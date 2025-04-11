@@ -1,0 +1,477 @@
+/* Variáveis de cores */
+:root {
+    --f1-red: #e10600;
+    --f1-dark: #15151e;
+    --f1-gray: #38383f;
+    --f1-light: #ffffff;
+    --f1-yellow: #ffd700;
+}
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--f1-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--f1-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c00500;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--f1-dark);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+.main-nav a.active {
+    color: var(--f1-yellow);
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Destaques */
+.highlights {
+    padding: 50px 0;
+}
+
+.highlights h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--f1-red);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--f1-red);
+}
+
+/* Classificação */
+.standings {
+    padding: 50px 0;
+}
+
+.standings h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--f1-red);
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--f1-gray);
+}
+
+.tab-btn.active {
+    color: var(--f1-red);
+    border-bottom-color: var(--f1-red);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.standing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.standing-table th, 
+.standing-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.standing-table th {
+    background-color: var(--f1-dark);
+    color: white;
+    font-weight: 600;
+}
+
+.standing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.standing-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Notícias */
+.news {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.news h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--f1-red);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--f1-dark);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.links-column h4 {
+    margin-bottom: 20px;
+    color: var(--f1-yellow);
+}
+
+.links-column ul {
+    list-style: none;
+}
+
+.links-column li {
+    margin-bottom: 10px;
+}
+
+.links-column a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links-column a:hover {
+    color: var(--f1-yellow);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--f1-red);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--f1-gray);
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Circuitos */
+.circuits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.circuit-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.circuit-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.circuit-info {
+    padding: 15px;
+}
+
+.circuit-info h3 {
+    color: var(--f1-red);
+    margin-bottom: 10px;
+}
+
+.circuit-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Última Corrida */
+.race-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.race-header h3 {
+    color: var(--f1-red);
+}
+
+.race-results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.race-results-table th, 
+.race-results-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.race-results-table th {
+    background-color: var(--f1-dark);
+    color: white;
+    font-weight: 600;
+}
+
+.race-results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.race-results-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para as tabelas */
+.standing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.standing-table th, 
+.standing-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.standing-table th {
+    background-color: #e10600;
+    color: white;
+}
+
+.standing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.standing-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.standing-table a {
+    color: #e10600;
+    text-decoration: none;
+}
+
+.standing-table a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para os cards de circuito */
+.circuit-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.circuit-card:hover {
+    transform: translateY(-5px);
+}
+
+.circuit-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.circuit-info {
+    padding: 15px;
+}
+
+.circuit-info h3 {
+    color: #e10600;
+    margin-bottom: 10px;
+}
+
+.circuit-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
